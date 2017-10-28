@@ -1,0 +1,25 @@
+{
+  "name": "mike",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test/test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "express": "^4.15.5",
+    "grunt": "^1.0.1",
+    "mocha": "^4.0.1",
+    "mongoose": "^4.12.3",
+    "morgan": "^1.9.0",
+    "nodemon": "^1.12.1"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "chai-http": "^3.0.0",
+    "jshint-stylish": "^2.2.1"
+  }
+}
