@@ -13,7 +13,7 @@ module.exports = function (app, config) {
 //request all documents from documents model
 router.get('/documents', function (req, res, next) { 
     console.log('Get all documents', 'verbose');
-    var query = document.find()
+    var query = documents.find()
       .sort(req.query.order)
       .exec()
       .then(result => {
@@ -36,8 +36,8 @@ router.get('/documents', function (req, res, next) {
   }); 
 
 router.post('/documents', function (req, res, next) {
-    console.log('Create document', 'verbose');
-    var document = new document(req.body);
+    console.log('Create documents', 'verbose');
+    var document = new documents(req.body);
     document.save()  //save document and back code 201
     .then(result => {
         res.status(201).json(result);

@@ -1,13 +1,13 @@
 
-var mongoose = require("mongoose");//connect to mongoose
+var mongoose = require("mongoose"); //connect to mongoose
 var Schema = mongoose.Schema;
 
 
 
 //define model properties
 var Schema = new Schema({
-    Property1: {type: String, required: true},
-    Property2: {type: Number, required: true}
+    Property1: {type: String, required: false},
+    Property2: {type: Number, required: false}
 });
 
 //create and export model
