@@ -9,9 +9,11 @@ var config = {
       name: 'Exam '
     },
     port: 5000,
-    db: 'mongodb://127.0.0.2/exam-dev'
+    db: 'mongodb://127.0.0.1:27017/exam-dev'
   }
+  
 };
+
 module.exports = config[env];
 
 

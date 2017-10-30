@@ -1,6 +1,6 @@
 
 var mongoose = require("mongoose");
-var Schema = Mongoose.Schema;
+var Schema = mongoose.Schema;
 
 
 var UserSchema = new Schema({
@@ -8,11 +8,11 @@ var UserSchema = new Schema({
     lastname: {type: String, required: true},
     email: {type: String, required: true, unique: true},
     password: {type: String, required: true},
-    dateRegistered: {tpe: Date, default: Date.now},
+    //dateRegistered: {tpe: Date, default: Date.now},
     status: {type: Boolean, default: true}
 
 });
 
 module.exports = 
- Mongoose.model('Users', mySchema);
+ mongoose.model('Users', UserSchema);
 
