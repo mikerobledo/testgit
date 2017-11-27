@@ -8,9 +8,16 @@
   },
   "license": "MIT",
   "dependencies": {
-    "aurelia-bootstrapper": "^2.1.1",
     "aurelia-animator-css": "^1.0.2",
+    "aurelia-auth": "^3.0.5",
+    "aurelia-bootstrapper": "^2.1.1",
     "bluebird": "^3.4.1",
+    "cors": "^2.8.4",
+    "jsonwebtoken": "^8.1.0",
+    "passport": "^0.4.0",
+    "passport-jwt": "^3.0.1",
+    "passport-local": "^1.0.0",
+    "regenerator-runtime": "^0.11.0",
     "requirejs": "^2.3.2",
     "text": "github:requirejs/text#latest"
   },

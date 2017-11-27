@@ -1,0 +1,21 @@
+<div show.bind="todos.todosArray.length">
+    <table class="table">
+            <thead>
+                <tr>
+                    <th>ToDo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr repeat.for = "todo of todos.todosArray">
+                    <th>${todo.todo}</th>
+                </tr>
+            </tbody>
+        </table>
+</div>
+<div show.bind="!todos.todosArray.length">
+    <h2>Apparently, you don't have anything to do!</h2>
+</div>
+   </div>
+    </div>
+</template> 
+

@@ -1,7 +1,7 @@
 var express = require('express'),
-    config = require('./config/config');
-var logger = require ('./config/logger');
-var app = express();
+    config = require('./config/config'),
+    logger = require ('./config/logger'),
+    app = express();
 
 require('./config/express')(app, config);
 

@@ -22,7 +22,7 @@ module.exports = function(grunt) {
       reporter: require('jshint-stylish'),
       esversion: 6
   },
-   all: ['index.js','Grunfile.js', 'config/*.js', 'app/controllers/*.js']
+   all: ['index.js','Grunfile.js', 'config/*.js','test/*.js', 'app/controllers/*.js']
 }
 
      
