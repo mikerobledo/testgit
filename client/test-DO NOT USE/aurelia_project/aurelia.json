@@ -1,5 +1,5 @@
 {
-  "name": "client",
+  "name": "FINAL PROJECT",
   "type": "project:application",
   "bundler": {
     "id": "cli",
@@ -85,17 +85,16 @@
             "main": "aurelia-fetch-client"
           },
           {
-              "name": "regenerator-runtime",
-              "path": "../node_modules/regenerator-runtime",
-              "main": "runtime-module"
+            "name": "regenerator-runtime",
+            "path": "../node_modules/regenerator-runtime",
+            "main": "runtime-module"
           },
           { 
             "name": "aurelia-auth",
              "path": "../node_modules/aurelia-auth/dist/amd",
              "main": "aurelia-auth"
-   }
-  
-
+          },
+          "text"
         ]
       }
     ],
@@ -166,5 +165,4 @@
     "id": "jasmine",
     "displayName": "Jasmine"
   }
-
 }

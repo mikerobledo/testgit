@@ -1,8 +1,11 @@
 import environment from './environment';
-import config from './auth-config';
-
 import regeneratorRuntime from 'regenerator-runtime';
 window.regeneratorRuntime = regeneratorRuntime;
+import config from './auth-config';
+
+
+Promise.config({  warnings: {    wForgottenReturn: false  }});
+
 
 export function configure(aurelia) {
   aurelia.use
@@ -10,7 +13,6 @@ export function configure(aurelia) {
     .plugin('aurelia-auth', (baseConfig)=>{
       baseConfig.configure(config);
  })
-
     .feature('resources');
 
   if (environment.debug) {

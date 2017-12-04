@@ -1,4 +1,4 @@
-'use strict';
+
 
 var mongoose = require("mongoose"),
     User = require('../app/models/users'),
@@ -41,7 +41,6 @@ it('it should POST a user', (done) => {
 			});
 });
 
-
 it('it should not POST a user without email field', (done) => {
         var user = {
             "firstName": "Jane",
@@ -57,7 +56,6 @@ it('it should not POST a user without email field', (done) => {
             });
 });
     
-
 it('it should GET all the users', (done) => {
                 var user = new User({
                     "firstName": "Jane",
@@ -164,9 +162,6 @@ describe('Todo', () => {
             "email": "JaneDoe@hoo.com",
             "password": "pass"
         });
-//         user.save((err, user) => {
-//           USER_ID = user._id;
-// });
     
 it('it should POST a todo', (done) => {
                 var todo = {
@@ -186,22 +181,6 @@ it('it should POST a todo', (done) => {
 });
         
 
-it('it should GET a users todos', (done) => {
-            var todo = new Todo({
-                "userId": user._id,
-                "todo": "This is my Todo"
-            });
-            todo.save((err, todo) => {      
-                chai.request(server)
-                    .get('/api/todos/user/' + user._id)
-                    .end((err, res) => {            
-                        res.should.have.status(200);
-                        res.body.should.be.a('array');
-                        res.body.length.should.be.eql(1);
-                        done();
-                    });
-            });
-});
     
 it('it should GET a todo', (done) => {
                 var todo = new Todo({
@@ -267,13 +246,29 @@ it('it should DELETE a todo given the id', (done) => {
 
 });
             
-
+// it('it should GET a users todos', (done) => {
+//             var todo = new Todo({
+//                 "userId": user._id,
+//                 "todo": "This is my Todo"
+//             });
+//             todo.save((err, todo) => {      
+//                 chai.request(server)
+//                     .get('/api/todos/user/' + user._id)
+//                     .end((err, res) => {            
+//                         res.should.have.status(200);
+//                         res.body.should.be.a('array');
+//                         res.body.length.should.be.eql(1);
+//                         done();
+//                     });
+//             });
+// });
 
 });
 
 describe('test', function() {
-    
-
+    it('/GET index.html');
+  });
+  
   it('it should GET the index.html file', (done) => {
       chai.request(server)
           .get('/index.html')
@@ -282,8 +277,7 @@ describe('test', function() {
               res.should.be.html;
           done();
           });
-  });  
-
+  });
     
 it('it should return 404', (done) => {
     chai.request(server)        
@@ -294,5 +288,4 @@ it('it should return 404', (done) => {
         });
 });
 
-    });
 

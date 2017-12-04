@@ -56,6 +56,9 @@ var controllers = glob.sync(config.root + '/app/controllers/*.js');
       res.send('404 Not Found');
     });
   
+    require('../app/controllers/users')(app, config);
+    require('../app/controllers/todos')(app, config);
+
     app.use(function (err, req, res, next) {
       // logger.log(err);
       if (process.env.NODE_ENV !== 'test') logger.log(err.stack,'error');
