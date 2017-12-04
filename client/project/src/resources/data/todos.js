@@ -41,7 +41,7 @@ export class ToDos {
   }
 
   async getUserTodos(id) {
-    let response = await this.data.get(this.TODO_SERVICE + "/" + id);
+    let response = await this.data.get(this.TODO_SERVICE + "/user/" + id);
     if (!response.error && !response.message) {
       this.todosArray = response;
     }

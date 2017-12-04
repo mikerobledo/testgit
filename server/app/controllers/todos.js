@@ -49,7 +49,7 @@ router.get('/todos/:todoId', function(req, res, next){
                     });
             });       
     
-router.get('/todos/:userId', function(req, res, next){
+router.get('/todos/user/:userId', function(req, res, next){
         logger.log('Get todo ' + req.params.userId, 'verbose');
             todo.find({userId: req.params.userId})
               .then(todo => {
