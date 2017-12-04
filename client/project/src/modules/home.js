@@ -45,5 +45,5 @@ export class Home {
     } else {
       this.registerError = "There was a problem registering the user.";
     }
-  }
+   }
 }
