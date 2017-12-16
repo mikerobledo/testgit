@@ -58,6 +58,9 @@ var controllers = glob.sync(config.root + '/app/controllers/*.js');
   
     require('../app/controllers/users')(app, config);
     require('../app/controllers/todos')(app, config);
+    require('../app/controllers/pics')(app, config);
+    require('../app/controllers/mypics')(app, config);
+
 
     app.use(function (err, req, res, next) {
       // logger.log(err);
